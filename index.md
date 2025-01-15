@@ -18,11 +18,11 @@ hero:
     #   link: /api-examples
 
 features:
-  - title: Feature A
+  - title: Feature A✅
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - title: Feature B🚀
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: Feature C✨
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
