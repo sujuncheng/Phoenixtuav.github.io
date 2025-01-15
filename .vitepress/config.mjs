@@ -17,11 +17,11 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '手册', link: '/handbook' },
-      { text: '示例', link: '/study/markdown-examples' },
+      // { text: '示例', link: '/study/markdown-examples' },
     ],
 
     sidebar: { "/handbook": set_sidebar("/handbook"),
-              "/study": set_sidebar("/study"),
+              // "/study": set_sidebar("/study"),
      },
     // sidebar: [
     //   {
