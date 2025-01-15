@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "无人机使用手册"
+  name: "智能无人机解决方案"
   text: "翎霄科技"
   tagline: PHOENIX-PRO
   image:

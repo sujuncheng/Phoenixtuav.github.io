@@ -4,8 +4,8 @@ import { set_sidebar } from "./utils/auto_sidebar.mjs";	// 改成自己的路径
     // https://vitepress.dev/reference/default-theme-config
 export default defineConfig({
   base: "",
-  title: "翎霄科技网站",
-  description: "翎霄科技网站",
+  title: "Phoenixtech翎霄科技",
+  description: "Phoenixtech翎霄科技",
   // 网页logo
   head: [["link", { rel: "icon", href: "logo.png" }]],
   themeConfig: {
