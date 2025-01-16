@@ -1,5 +1,6 @@
 import path from "node:path";
 import fs from "node:fs";
+import { log } from "node:console";
 
 // 文件根目录
 const DIR_PATH = path.resolve();
@@ -30,6 +31,9 @@ function getList(params, path1, pathname) {
     // 判断是否是文件夹
     const isDir = isDirectory(dir);
     if (isDir) {
+      if (params[file] == "assets" || params[file] == "pictures") {
+        continue;
+      }
       // 如果是文件夹,读取之后作为下一次递归参数
       const files = fs.readdirSync(dir);
       res.push({
