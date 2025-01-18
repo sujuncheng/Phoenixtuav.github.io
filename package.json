@@ -1,11 +1,14 @@
 {
   "devDependencies": {
-    "vitepress": "^1.5.0"
+    "puppeteer": "^24.1.0",
+    "vitepress": "^1.5.0",
+    "vitepress-export-pdf": "^1.0.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "export-pdf": "press-export-pdf export . --outFile 智能无人机解决方案.pdf --outDir ./.vitepress/dist --urlOrigin https://phoenixtuav.github.io/"
   },
   "dependencies": {
     "@iminu/vitepress-plugin-auto-sidebar": "^1.0.3"
