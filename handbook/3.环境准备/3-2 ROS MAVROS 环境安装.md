@@ -12,7 +12,39 @@ Ubuntu 20.04
 
 ROS Noetic
 
+MAVROS
+
 ## ROS 安装
+
+#### 使用[鱼香肉丝](https://fishros.org.cn/forum/topic/20/%E5%B0%8F%E9%B1%BC%E7%9A%84%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97)进行安装（推荐）
+
+一行代码-解决人生烦恼
+
+```
+wget http://fishros.com/install -O fishros && . fishros
+```
+
+输入1，安装ros
+
+输入1，更换系统源
+
+输入1，仅更换系统源
+
+输入3，安装ROS Noetic
+
+> （不一定是3，注意选项ROS Noetic即可）
+
+输入1，安装桌面版
+
+ROS包含构建包的依赖，也就是下面这个安装命令，否则后面安装PX4环境会出现问题。
+
+```
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+```
+
+#### 根据[ros官网](https://wiki.ros.org/cn/noetic/Installation/Ubuntu)指令进行安装
+
+::: details 点击展开
 
 设置清华ros软件源
 
@@ -20,7 +52,7 @@ ROS Noetic
 sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
 
-> 官方源如下
+> 若要官方源则指令如下
 >
 > ```
 > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -70,6 +102,8 @@ sudo rosdep init
 rosdep update
 ```
 
+:::
+
 ## MAVROS安装
 
 安装 mavros 包
@@ -83,4 +117,28 @@ sudo apt install ros-noetic-mavros ros-noetic-mavros-extras
 ```
 sudo /opt/ros/noetic/lib/mavros/install_geographiclib_datasets.sh
 ```
+
+::: tip Tip:若一直下载失败可以考虑这个方法
+
+[点击下载GeographicLib.zip](./assets/GeographicLib.zip)
+
+解压压缩包
+
+```
+unzip GeographicLib.zip
+```
+
+先清理目标文件夹
+
+```
+sudo rm -rf /usr/share/GeographicLib
+```
+
+将文件夹移动到`/usr/share/`下
+
+```
+sudo mv GeographicLib /usr/share/
+```
+
+:::
 
