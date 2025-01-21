@@ -80,9 +80,13 @@ git clone https://aur.archlinux.org/todesk-bin.git
 
 ::: tab Ubuntu
 
+执行以下指令，解压并安装`todesk`
+
 ```sh
 sudo apt install ./todesk-v4.7.2.0-amd64.deb
 ```
+
+![](./assets/Snipaste_2025-01-21_13-54-27.png)
 
 :::
 
@@ -100,17 +104,18 @@ cd todesk-bin/
 makepkg -si
 ```
 
+![](./assets/Snipaste_2025-01-21_11-32-50.png)
+
 :::
 
 ::::
 
 ## 启动
 
-![](./assets/Snipaste_2025-01-21_11-32-50.png)
 
-在桌面左下角找到`Application Launcher`，在列表中找到`ToDesk`，单击图标启动
-
-![](./assets/Snipaste_2025-01-21_11-36-11.png)
+```sh
+todesk
+```
 
 ![](./assets/Snipaste_2025-01-21_11-44-51.png)
 
