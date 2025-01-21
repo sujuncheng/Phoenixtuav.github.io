@@ -2,11 +2,11 @@
 
 ToDesk官网：https://www.todesk.com/
 
+## 下载
+
 :::: tabs
 
 ::: tab Ubuntu
-
-## 下载
 
 打开浏览器，访问 https://www.todesk.com/linux.html
 
@@ -34,17 +34,9 @@ wget https://dl.todesk.com/linux/todesk-v4.7.2.0-amd64.deb
 
 ![](./assets/Snipaste_2025-01-21_13-30-02.png)
 
-## 安装
-
-```sh
-sudo apt install ./todesk-v4.7.2.0-amd64.deb
-```
-
 :::
 
 ::: tab Arch Linux
-
-## 安装
 
 **请勿根据`ToDesk`官网的安装教程进行安装，否则一定会遇到版本过低无法使用的错误！**
 
@@ -78,6 +70,24 @@ git clone https://aur.archlinux.org/todesk-bin.git
 
 ![](./assets/Snipaste_2025-01-21_11-29-23.png)
 
+:::
+
+::::
+
+## 安装
+
+:::: tabs
+
+::: tab Ubuntu
+
+```sh
+sudo apt install ./todesk-v4.7.2.0-amd64.deb
+```
+
+:::
+
+::: tab Arch Linux
+
 导航到`todesk-bin`文件夹
 
 ```sh
@@ -90,6 +100,10 @@ cd todesk-bin/
 makepkg -si
 ```
 
+:::
+
+::::
+
 ## 启动
 
 ![](./assets/Snipaste_2025-01-21_11-32-50.png)
@@ -99,16 +113,6 @@ makepkg -si
 ![](./assets/Snipaste_2025-01-21_11-36-11.png)
 
 ![](./assets/Snipaste_2025-01-21_11-44-51.png)
-
-## 卸载
-
-```sh
-sudo pacman -Rns todesk-bin
-```
-
-:::
-
-::::
 
 ::: tip
 
@@ -123,3 +127,25 @@ sudo systemctl start todeskd.service
 ![](./assets/Snipaste_2025-01-21_11-44-00.png)
 
 :::
+
+## 卸载
+
+:::: tabs
+
+::: tab Ubuntu
+
+```sh
+sudo apt remove --purge todesk
+```
+
+:::
+
+::: tab Arch Linux
+
+```sh
+sudo pacman -Rns todesk-bin
+```
+
+:::
+
+::::
