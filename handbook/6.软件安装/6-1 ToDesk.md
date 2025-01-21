@@ -4,15 +4,21 @@ ToDesk官网：https://www.todesk.com/
 
 :::: tabs
 
+::: tab Ubuntu
+
+```sh
+sudo snap install todesk
+```
+
+:::
+
 ::: tab Arch Linux
 
 ## 安装
 
-::: danger
+danger
 
 请勿根据`ToDesk`官网的安装教程进行安装，否则一定会遇到版本过低无法使用的错误！
-
-:::
 
 打开浏览器，访问 https://aur.archlinux.org/
 
@@ -68,7 +74,7 @@ makepkg -si
 
 ![](./assets/Snipaste_2025-01-21_11-44-51.png)
 
-::: tip
+tip
 
 如果在登陆账户时，不能正常连接网络，请执行以下命令初始化
 
@@ -80,22 +86,10 @@ sudo systemctl start todeskd.service
 
 ![](./assets/Snipaste_2025-01-21_11-44-00.png)
 
-:::
-
 ## 卸载
 
 ```sh
 sudo pacman -Rns todesk-bin
 ```
-
-:::
-
-::: tab Ubuntu
-
-```sh
-sudo snap install todesk
-```
-
-:::
 
 ::::

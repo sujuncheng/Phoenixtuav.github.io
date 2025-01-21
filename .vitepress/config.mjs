@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { set_sidebar } from "./utils/auto_sidebar.mjs";	// 改成自己的路径
+import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
+
 // https://vitepress.dev/reference/site-config
 // https://vitepress.dev/reference/default-theme-config
 export default defineConfig({
@@ -8,6 +10,11 @@ export default defineConfig({
   description: "Phoenixtech翎霄科技",
   // 网页logo
   head: [["link", { rel: "icon", href: "logo.png" }]],
+  markdown: {
+    config: (md) => {
+      tabsPlugin(md)
+    },
+  },
   themeConfig: {
     outlineTitle: "文章目录",
     outline: [2, 6],
