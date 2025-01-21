@@ -4,15 +4,49 @@ ToDesk官网：https://www.todesk.com/
 
 :::: tabs
 
+::: tab Ubuntu
+
+## 下载
+
+打开浏览器，访问 https://www.todesk.com/linux.html
+
+在左侧系统列表中，找到`Debian/Ubuntu/Mint (x64)`，单击进入
+
+![](./assets/Snipaste_2025-01-21_13-09-26.png)
+
+单击`立即下载`，将`.deb`文件保存到`~/Software/`文件夹下
+
+![](./assets/Snipaste_2025-01-21_13-23-58.png)
+
+为快速上手，上述步骤也可以简化为
+
+打开`Terminal`，导航到目标下载路径`~/Sotfware/`
+
+```sh
+cd ~/Softfware/
+```
+
+执行以下指令，下载`todesk` 安装包
+
+```sh
+wget https://dl.todesk.com/linux/todesk-v4.7.2.0-amd64.deb
+```
+
+![](./assets/Snipaste_2025-01-21_13-30-02.png)
+
+## 安装
+
+```sh
+sudo apt install ./todesk-v4.7.2.0-amd64.deb
+```
+
+:::
+
 ::: tab Arch Linux
 
 ## 安装
 
-::: danger
-
-请勿根据`ToDesk`官网的安装教程进行安装，否则一定会遇到版本过低无法使用的错误！
-
-:::
+**请勿根据`ToDesk`官网的安装教程进行安装，否则一定会遇到版本过低无法使用的错误！**
 
 打开浏览器，访问 https://aur.archlinux.org/
 
@@ -28,13 +62,13 @@ ToDesk官网：https://www.todesk.com/
 
 ![](./assets/Snipaste_2025-01-21_11-24-03.png)
 
-打开`Konsole`，导航到目标下载路径
+**为快速上手，上述步骤也可以直接跳过**
+
+打开`Konsole`，导航到目标下载路径`~/Sotfware/`
 
 ```sh
 cd ~/Sotfware/
 ```
-
-![](./assets/Snipaste_2025-01-21_11-28-26.png)
 
 执行以下指令，下载`todesk`源码
 
@@ -49,8 +83,6 @@ git clone https://aur.archlinux.org/todesk-bin.git
 ```sh
 cd todesk-bin/
 ```
-
-![](./assets/Snipaste_2025-01-21_11-30-22.png)
 
 执行以下指令，编译并安装`todesk-bin`
 
@@ -68,6 +100,16 @@ makepkg -si
 
 ![](./assets/Snipaste_2025-01-21_11-44-51.png)
 
+## 卸载
+
+```sh
+sudo pacman -Rns todesk-bin
+```
+
+:::
+
+::::
+
 ::: tip
 
 如果在登陆账户时，不能正常连接网络，请执行以下命令初始化
@@ -81,21 +123,3 @@ sudo systemctl start todeskd.service
 ![](./assets/Snipaste_2025-01-21_11-44-00.png)
 
 :::
-
-## 卸载
-
-```sh
-sudo pacman -Rns todesk-bin
-```
-
-:::
-
-::: tab Ubuntu
-
-```sh
-sudo snap install todesk
-```
-
-:::
-
-::::
