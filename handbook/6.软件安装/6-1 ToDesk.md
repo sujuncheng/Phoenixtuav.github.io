@@ -92,4 +92,6 @@ sudo systemctl start todeskd.service
 sudo pacman -Rns todesk-bin
 ```
 
+:::
+
 ::::
