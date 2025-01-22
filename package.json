@@ -13,6 +13,7 @@
     "export-pdf": "press-export-pdf export . --outFile 智能无人机解决方案.pdf --outDir ./.vitepress/dist --urlOrigin https://phoenixtuav.github.io/"
   },
   "dependencies": {
-    "@iminu/vitepress-plugin-auto-sidebar": "^1.0.3"
+    "@iminu/vitepress-plugin-auto-sidebar": "^1.0.3",
+    "@theojs/lumen": "^5.4.0"
   }
 }

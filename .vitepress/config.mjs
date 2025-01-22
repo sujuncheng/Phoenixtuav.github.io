@@ -44,7 +44,8 @@ export default defineConfig({
 
     // 最下面的页脚
     footer: {
-      copyright: "copyright 版权所有"
+      // message: '宁波翎霄科技有限公司<p>客服电话：18835020985<p>公司邮箱：francis_shaohuali@163.com<p>公司地址：浙江省宁波市海曙区文化路88号D座3楼311室<p>ICP备案号：浙ICP备2025147458号-1',
+      // copyright: 'Copyright © 2025 宁波翎霄科技有限公司.All right reserved'
     },
 
     // 设置搜索框的样式
