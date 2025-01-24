@@ -25,13 +25,13 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '手册', link: '/handbook' },
       { text: '关于我们', link: '/about' },
-      { text: '示例', link: '/study/markdown-examples' },
+      // { text: '示例', link: '/study/markdown-examples' },
     ],
 
     sidebar: {
       "/handbook": set_sidebar("/handbook"),
       "/about": set_sidebar("/about"),
-      "/study": set_sidebar("/study"),
+      // "/study": set_sidebar("/study"),
     },
 
     // 右上角图标栏
