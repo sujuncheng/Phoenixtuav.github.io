@@ -99,3 +99,29 @@ balenaEtcher 镜像烧录软件
 出现`Please remove the installation medium, then press ENTER:`
 
 拔掉u盘按下回车即可
+
+::: tip
+
+如果您在使用机载电脑时，遇到了没有WiFi的问题，可以参考以下博客进行解决：
+
+https://www.yuque.com/easonhua/nx9k7f/ux0umt84lltsdv44
+
+对于型号为`Intel Wi-Fi 6 AX`系列的网卡，可以通过以下几个步骤进行解决：
+
+```sh
+cd ~/Software
+wget https://archive.ubuntu.com/ubuntu/pool/universe/b/backport-iwlwifi-dkms/backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
+```
+
+```sh
+sudo apt update
+sudo dpkg -i backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
+sudo apt --fix-broken install
+sudo dpkg -i backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
+```
+
+```sh
+sudo reboot
+```
+
+:::
