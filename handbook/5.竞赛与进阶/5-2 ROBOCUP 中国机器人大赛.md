@@ -2,7 +2,7 @@
 
 ## 规则介绍
 
-<iframe src="./assets/ROBOCUP 中国机器人大赛.pdf" width="100%" height="600px"></iframe>
+<iframe src="/ROBOCUP 中国机器人大赛.pdf" width="100%" height="600px"></iframe>
 
 ## 快速启动脚本
 

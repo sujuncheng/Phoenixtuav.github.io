@@ -2,7 +2,7 @@
 
 ## 规则介绍
 
-<iframe src="./assets/CRAIC 人工智能大赛.pdf" width="100%" height="600px"></iframe>
+<iframe src="/CRAIC 人工智能大赛.pdf" width="100%" height="600px"></iframe>
 
 ## 快速启动脚本
 
