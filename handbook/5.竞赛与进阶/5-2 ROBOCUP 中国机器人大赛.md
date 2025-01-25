@@ -2,11 +2,7 @@
 
 ## 规则介绍
 
-> TODO
-
-以仿真示例
-
-> **实物脚本是`~/uav_ws/src/uav_code/sh/robocup_real.sh`，需要将`~/uav_ws/src/uav_code/fly_demo/params/robocup.yaml`中的参数改为`if_true: true`**
+<iframe src="./assets/ROBOCUP 中国机器人大赛.pdf" width="100%" height="600px"></iframe>
 
 ## 快速启动脚本
 
@@ -15,6 +11,12 @@
 ```
 ~/uav_ws/src/uav_code/sh/robocup_sim.sh
 ```
+
+::: tip 这里仅以仿真示例
+
+实物脚本是`~/uav_ws/src/uav_code/sh/robocup_real.sh`，需要将`~/uav_ws/src/uav_code/fly_demo/params/robocup.yaml`中的参数改为`if_true: true`
+
+:::
 
 ## 执行启动指令
 
