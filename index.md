@@ -13,9 +13,9 @@ hero:
     - theme: brand
       text: 立即开始
       link: /handbook
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+    - theme: alt
+      text: 关于我们
+      link: /about
 
 features:
   - title: 全面而清晰的文档📝
