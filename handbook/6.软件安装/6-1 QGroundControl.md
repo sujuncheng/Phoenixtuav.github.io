@@ -20,7 +20,7 @@ https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/downloa
 
 ![](./assets/Snipaste_2025-01-24_13-00-10.png)
 
-## 连接飞机
+## 连接飞控
 
 ::: tip
 
@@ -50,6 +50,8 @@ roslaunch mavros px4.launch
 
 每次修改完参数，记得在右上角`工具`中，选择重启飞行器，保存修改结果。
 
+如果是无线连接，每次重启后，需在机载电脑上重新执行`roslaunch mavros px4.launch`
+
 :::
 
 ### 定位相关
@@ -64,6 +66,18 @@ https://www.yuque.com/easonhua/nx9k7f/uurp9rbtdla8no6w
 
 ![](./assets/Snipaste_2025-01-24_16-50-43.png)
 
+- EKF2_HGT_REF
+
+改用视觉定高
+
+![](./assets/EKF2_HGT_REF.png)
+
+- EKF2_GPS_CTRL
+
+禁用GPS定位
+
+![](./assets/EKF2_GPS_CTRL.png)
+
 - EKF2_BARO_CTRL
 
 禁用气压计定高
@@ -72,16 +86,14 @@ https://www.yuque.com/easonhua/nx9k7f/uurp9rbtdla8no6w
 
 ### 速度限制
 
-https://www.yuque.com/easonhua/nx9k7f/frza73gt6vi8r8p8
-
 修改以下2个参数：
 
 - MPC_XY_VEL_MAX
 
-限制水平方向速度在0.7m/s以内
+限制**水平方向速度**在0.7m/s以内
 
 ![](./assets/Snipaste_2025-01-24_16-47-09.png)
 
 - MPC_Z_VEL_MAX
 
-也可以就按默认的参数来
+可以就按默认的参数来
