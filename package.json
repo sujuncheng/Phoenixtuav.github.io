@@ -10,7 +10,7 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "export-pdf": "press-export-pdf export . --outFile 智能无人机解决方案.pdf --outDir ./.vitepress/dist --urlOrigin https://phoenixtuav.github.io/"
+    "export-pdf": "press-export-pdf export . --outFile 智能无人机解决方案.pdf --outDir ./.vitepress/dist --urlOrigin https://phoenixuav.cn/"
   },
   "dependencies": {
     "@iminu/vitepress-plugin-auto-sidebar": "^1.0.3",

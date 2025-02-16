@@ -40,7 +40,7 @@ balenaEtcher 镜像烧录软件
 
 3. 现在烧录！
 
-![](./assets/image.png)
+![](./assets/image2.png)
 
 ## 分配存储空间
 

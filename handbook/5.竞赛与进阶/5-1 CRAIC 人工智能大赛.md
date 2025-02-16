@@ -32,6 +32,12 @@ roslaunch fly_sim sim.launch world_name:=craic.world
 roslaunch circle_qr_detect sim.launch
 ```
 
+### 打开舵机驱动（实物飞行中）
+
+```
+rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB0 _baud:=57600
+```
+
 ## 启动控制节点
 
 打开`~/uav_ws/src/uav_code/fly_demo/params/craic.yaml`调整参数

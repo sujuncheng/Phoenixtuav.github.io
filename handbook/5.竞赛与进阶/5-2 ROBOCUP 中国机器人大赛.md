@@ -33,7 +33,13 @@ roslaunch circle_qr_detect sim.launch
 ```
 
 ```
-conda activate yolov5 && roslaunch yolov5_pub yolov5_detect_sim.launch
+roslaunch yolov5_pub yolov5_detect_sim.launch
+```
+
+### 打开舵机驱动（实物飞行中）
+
+```
+rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB0 _baud:=57600
 ```
 
 ## 启动控制节点
