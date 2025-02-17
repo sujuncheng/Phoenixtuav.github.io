@@ -53,8 +53,8 @@ jobs:
           username: ${{ secrets.DOCKER_ID }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           port: ${{ secrets.DOCKER_PORT }}
-          source: ".vitepress/dist"
-          target: "/phoenixtechuav/web"
+          source: ".vitepress/dist/*"
+          target: "/phoenixtechuav/web/dist"
 
 
   # 部署工作
