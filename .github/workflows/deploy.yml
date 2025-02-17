@@ -47,14 +47,13 @@ jobs:
         with:
           path: .vitepress/dist # 指定上传的路径，当前是根目录，如果是docs需要加docs/的前缀
       - name: SCP Deploy to Remote Server # scp到远端服务器
-        uses: appleboy/scp-action@master
+        uses: garygrossgarten/github-action-scp@release
         with:
+          local: .vitepress/dist
+          remote: /phoenixtechuav/web
           host: ${{ secrets.DOCKER_IP_DEV }}
           username: ${{ secrets.DOCKER_ID }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          port: ${{ secrets.DOCKER_PORT }}
-          source: ".vitepress/dist/*"
-          target: "/phoenixtechuav/web/dist"
 
 
   # 部署工作
