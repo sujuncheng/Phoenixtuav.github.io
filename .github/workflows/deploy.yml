@@ -60,9 +60,11 @@ jobs:
         id: deployment  # 指定id
         uses: actions/deploy-pages@v4 # 将之前的构建产物部署到github pages中
       - name: SCP Deploy to Remote Server
-        run: |
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          scp -r .vitepress/dist root@${{ secrets.REMOTE_SERVER }}:/phoenixtechuav/web
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.DOCKER_IP_DEV }}
+          username: ${{ secrets.DOCKER_ID }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          port: ${{ secrets.DOCKER_PORT }}
+          source: ".vitepress/dist"
+          target: "/phoenixtechuav/web"
