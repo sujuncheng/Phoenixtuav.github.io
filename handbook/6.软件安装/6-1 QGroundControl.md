@@ -56,13 +56,11 @@ roslaunch mavros px4.launch
 
 ### 定位相关
 
-https://www.yuque.com/easonhua/nx9k7f/uurp9rbtdla8no6w
-
-修改以下2个参数：
+修改以下 4 个参数：
 
 - EKF2_EV_CTRL
 
-设置为由`/mavros/vision_pose/pose`提供定位信息
+设置为由`/mavros/vision_pose/pose`话题下的数据提供定位信息
 
 ![](./assets/Snipaste_2025-01-24_16-50-43.png)
 
@@ -74,13 +72,13 @@ https://www.yuque.com/easonhua/nx9k7f/uurp9rbtdla8no6w
 
 - EKF2_GPS_CTRL
 
-禁用GPS定位
+禁用GPS定位（目前飞机没有GPS模块）
 
 ![](./assets/EKF2_GPS_CTRL.png)
 
 - EKF2_BARO_CTRL
 
-禁用气压计定高
+禁用气压计定高（因为不准）
 
 ![](./assets/Snipaste_2025-01-24_16-51-35.png)
 
