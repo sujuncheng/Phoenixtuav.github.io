@@ -11,6 +11,7 @@ export default defineConfig({
   // 网页logo
   head: [["link", { rel: "icon", href: "logo.png" }]],
   markdown: {
+    math: true,
     config: (md) => {
       tabsPlugin(md)
     },
