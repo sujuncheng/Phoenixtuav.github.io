@@ -111,13 +111,8 @@ https://www.yuque.com/easonhua/nx9k7f/ux0umt84lltsdv44
 ```sh
 cd ~/Software
 wget https://archive.ubuntu.com/ubuntu/pool/universe/b/backport-iwlwifi-dkms/backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
-```
-
-```sh
 sudo apt update
-sudo dpkg -i backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
-sudo apt --fix-broken install
-sudo dpkg -i backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
+sudo apt install ./backport-iwlwifi-dkms_9858-0ubuntu3_all.deb
 ```
 
 ```sh
