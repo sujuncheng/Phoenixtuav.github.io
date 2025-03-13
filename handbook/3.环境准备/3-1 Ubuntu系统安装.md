@@ -58,8 +58,6 @@ balenaEtcher 镜像烧录软件
 
 ## 安装Ubuntu
 
-> 这里使用了这个[视频教程](https://www.bilibili.com/video/BV1554y1n7zv)的图片
-
 选择中文后点击安装
 
 ![](./assets/install.png)
