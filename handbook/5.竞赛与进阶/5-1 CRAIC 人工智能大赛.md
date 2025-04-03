@@ -14,7 +14,7 @@
 
 ::: tip 这里仅以仿真示例
 
-实物脚本是`~/uav_ws/src/uav_code/sh/craic_real.sh`，需要将`~/uav_ws/src/uav_code/fly_demo/params/craic.yaml`中的参数改为`if_true: true`
+实物脚本是`~/uav_ws/src/uav_code/sh/craic_real.sh`，需要将`~/uav_ws/src/uav_code/fly_demo/params/craic.yaml`中的参数改为`if_physical: true`
 
 :::
 
@@ -42,11 +42,11 @@ rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB0 _baud:=57600
 
 打开`~/uav_ws/src/uav_code/fly_demo/params/craic.yaml`调整参数
 
-**需要将改为`if_true: false`以使无人机自动起飞，为true时无人机会自动切入offboard，为false时会等待遥控器拨下offboard拨杆**
+**需要将改为`if_physical: false`以使无人机自动起飞，为true时无人机会自动切入offboard，为false时会等待遥控器拨下offboard拨杆**
 
 ```
 # 实物还是仿真 仿真（false）中自动起飞 实物（true）中等待遥控器切入offboard模式
-if_true: false
+if_physical: false
 #-------------------------------------
 #  速度参数
 #-------------------------------------
