@@ -162,7 +162,7 @@ python3 train.py --data data/data.yaml --batch-size 1 --cfg cfg/training/yolov7-
 
 ::: info
 
-当然你可能会遇到一些报错，请参考[这篇文档](../8.报错处理/8-1%20YOLOv7报错.md)解决。
+当然你可能会遇到一些报错，请参考[这篇文档](../8.报错处理/8-1%20YOLOv7训练报错.md)解决。
 
 :::
 
