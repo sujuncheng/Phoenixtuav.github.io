@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "智能无人机解决方案"
   text: "翎霄科技"
-  tagline: PHOENIX-PRO
+  tagline: Aethereal-330
   image:
     src: background.png
     alt: background
