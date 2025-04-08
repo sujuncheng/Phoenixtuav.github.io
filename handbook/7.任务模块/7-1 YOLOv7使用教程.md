@@ -1,13 +1,8 @@
 # YOLOv7使用教程
 
-```bash
-sudo apt install ros-noetic-vision-msgs
-```
-
 ## 创建 conda 环境
 
-> 翎霄科技出品的成品无人机在出厂时已经预装好了Anaconda环境，如果你还没有安装好 Anaconda，请先根据[官网教程](https://www.anaconda.com/docs/getting-started/anaconda/install#macos-linux-installation)把它装上
->
+翎霄科技出品的无人机在出厂时已经预装好了Anaconda环境，如果你还没有安装好 Anaconda，请先根据[官网教程](https://www.anaconda.com/docs/getting-started/anaconda/install#macos-linux-installation)把它装上
 
 ```bash
 roscd yolov7_ros/src/yolov7_ros/yolov7
@@ -16,20 +11,21 @@ conda activate yolov7
 ```
 
 ::: danger
+ 
+conda 环境只在训练和测试 YOLO 时会用到，其他时候必须关掉，否则可能无法正常启动 ROS 节点！
 
-特别提醒：conda 环境只在训练 YOLO 时会用到，其他时候必须关掉，否则无法正常启动 ROS 节点！
+有两种方式可以关掉： 
 
-有两种方式可以关掉：  
-1. 直接在终端执行 `conda deactivate`  
-2. 在 `~/.bashrc` 文件中注释掉与 conda 相关的内容
+1. 暂时关闭：直接在终端执行 `conda deactivate` 
+2. 永久关闭：在 `~/.bashrc` 文件中注释掉与 conda 相关的内容
 
 :::
 
-## 安装 Python 库
+## 安装一些 Python 库
 
 #### 安装 PyTorch 库
 
-访问[官方网站](https://pytorch.org/get-started/locally/)，根据自身需求安装合适的版本。
+访问[PyTorch官方网站](https://pytorch.org/get-started/locally/)，根据自身需求安装合适的版本。
 
 例如：对于非 NVIDIA 显卡用户，执行以下指令：
 
@@ -56,11 +52,11 @@ pip install -r requirements.txt
 
 ![](./assets/Snipaste_2025-04-07_16-19-24.png)
 
-下载预训练模型（默认是[yolov7.pt](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt)）到`~/uav_ws/src/uav_code/yolov7_ros/yolov7_ros/weights/`文件夹下
+下载预训练模型（默认是yolov7.pt）到`~/uav_ws/src/uav_code/yolov7_ros/yolov7_ros/weights/`文件夹下
 
 ```bash
 roscd yolov7_ros/weights/
-wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
+wget https://github.com/Phoenixtuav/Phoenixtuav.github.io/releases/download/v0.0.1/yolov7.pt
 ```
 
 :::
@@ -79,8 +75,7 @@ wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
 
 1. 访问[官方网站](https://app.roboflow.com/easonhua/phoenixtech/1)
 
-> 以上是我个人准备的数据集，如果你已经准备好了自己的数据集，请直接跳过这一步
->
+以上是我个人准备的数据集，如果你已经准备好了自己的数据集，请直接跳过这一步
 
 2. 点击右上角`Download Dataset`
 3. 选择`Download Dataset`
@@ -96,13 +91,13 @@ wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt
 
 8. 将.zip 压缩包保存在`~/uav_ws/src/uav_code/fly_vision/yolov7_ros/yolov7_ros/src/yolov7_ros/yolov7/data/`文件夹下
 
-::: warning
+::: info
 
 如果您暂时无法登入该网站，可以通过以下方式下载
 
 ```bash
 roscd yolov7_ros/src/yolov7_ros/yolov7/data/
-wget Phoenixtech.v1i.yolov7pytorch.zip
+wget https://github.com/Phoenixtuav/Phoenixtuav.github.io/releases/download/v0.0.1/Phoenixtech.v1i.yolov7pytorch.zip
 ```
 
 :::
@@ -130,7 +125,7 @@ unzip Phoenixtech.v1i.yolov7pytorch.zip
 
 ```bash
 roscd yolov7_ros/weights/
-wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7_training.pt
+wget https://github.com/Phoenixtuav/Phoenixtuav.github.io/releases/download/v0.0.1/yolov7_training.pt
 ```
 
 2. 找到 `cfg/training` 文件夹下，选择你想要训练的模型版本，然后在该文件夹下复制一份，重命名一下，例如 `yolov7-phoenixtech.yaml`
@@ -162,7 +157,7 @@ python3 train.py --data data/data.yaml --batch-size 1 --cfg cfg/training/yolov7-
 
 ::: info
 
-当然你可能会遇到一些报错，请参考[这篇文档](../8.报错处理/8-1%20YOLOv7训练报错.md)解决。
+您在使用YOLO时可能会遇到一些报错，请参考[这篇文档](../8.报错处理/8-1%20YOLOv7训练报错.md)解决。
 
 :::
 
@@ -227,13 +222,15 @@ roslaunch fly_demo yolov7_ros.launch
 
 ![](./assets/image%20(8).png)
 
-::: warning
+::: info
 
-特别提醒：以下部分强烈建议点开链接，查看原始数据，增加理解！
+以下部分强烈建议点开链接，查看原始数据，增加理解！
 
 :::
 
 具体结果输出在`/detections`话题下，格式为[vision_msgs/Detection2DArray](https://docs.ros.org/en/noetic/api/vision_msgs/html/msg/Detection2DArray.html)
+
+可以用`rqt`中的`Topic Monitor`来查看话题内容：
 
 ![](./assets/Snipaste_2025-04-07_21-45-27.png)
 
